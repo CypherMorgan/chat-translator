@@ -1,0 +1,5 @@
+RegisterCommand('say', function(source, args, rawCommand)
+    local message = table.concat(args, " ")
+    local playerName = GetPlayerName(source)
+    TriggerClientEvent('chat:translateMessage', -1, playerName, message)
+end, false)
